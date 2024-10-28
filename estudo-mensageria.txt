@@ -1,0 +1,55 @@
+
+MENSAGERIA
+Mensageria é uma abordagem de desenvolvimento que utiliza mensagens para estabelecer comunicação entre aplicações de forma síncrona e assíncrona. 
+Essa abordagem faz uso de um Message Broker.
+
+MESSAGE BROKER
+Message Broker são componentes de software que facilitam a troca de mensagens entre diferentes sistemas, 
+aplicativos ou componentes dentro de um sistema distribuído. Eles atuam como intermediários, permitindo que 
+produtores de mensagens enviem informações para um local centralizado e que consumidores de mensagens 
+recebam essas informações conforme necessário.
+
+
+CONCEITOS BÁSICOS DE MENSAGERIA:
+
+PRODUTOR - o 'produtor' é responsável por publicar uma mensagem.
+CONSUMIDOR - o 'consumidor' é responsável por consumir a mensagem publicada pelo produtor.
+FILA - uma 'fila de mensagem' é uma estrutura de dados que segue o padrão FIFO (First In, First Out),
+onde é possível colocar mensagens de forma ordenada. As filas servem para enfileirar as 
+chamadas para um serviço, onde cada mensagem é consumida por apenas um consumidor para garantir 
+o processamento sequencial de tarefas.
+TÓPICO - um 'tópico' é um canal de comunicação em que os produtores de mensagens podem enviar
+informações para diversos consumidores interessados no conteúdo específico do tópico. Isso permite
+uma comunicação eficiente entre diferentes partes do sistema.
+
+
+PROTOCOLOS PARA MENSAGERIA:
+Existem 5 principais protocolos usados hoje para sistemas de mensageria:
+
+- Java Message Service (JMS) : voltado para integrações entre serviços ou componentes
+desenvolvidos em Java.
+
+- Advanced Message Queuing Protocol (AMQP) : protocolo mais atual que oferece suporte a várias
+linguagens de programação. As mensagens são gerenciadas em Filas e são assíncronas.
+
+- Message Queue Telemetry Transport (MQTT) : muito utilizada para comunicação de dispositivos inteligentes (IoT).
+
+- Simple/Streaming Text Oriented Messaging Protocol (STOMP) : mais voltado para streaming de dados, onde a
+informação precisa ser entregue praticamente em tempo real para os consumidores.
+
+- Microsoft Message Queuing (MSMQ) : esse protocolo é uma implementação da Microsoft, bastante usada em 
+aplicações desenvolvidas em linguagem proprietária da empresa.
+
+
+EXEMPLOS DE MESSAGE BROCKERS DO MERCADO:
+
+RabbitMQ é um corretor de mensagens e streaming que utiliza o protocolo AMQP. Esse padrão, permite
+que os programas definam filas de mensagens e regras de roteamento que direcionam mensagens para
+as filas. O processo ocorre de forma assíncrona.
+
+BullMQ é uma biblioteca que se conecta com um servidor Redis. Utiliza o protocolo AMQP.É ideal para aplicações
+Node.js com necessidades de fila simples. Permite suporte para a utilização de prioridades e a definição de 
+ações a serem executadas antes e depois do processamento de cada trabalho.
+
+Kafka é uma plataforma de streaming de eventos que organiza as mensagens em tópicos e partições. Utiliza
+o protocolo STOMP. É ideal para big data, pois consegue processar uma grande quantidade de mensagens por dia.
